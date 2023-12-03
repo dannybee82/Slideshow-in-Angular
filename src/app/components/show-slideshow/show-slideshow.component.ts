@@ -56,11 +56,7 @@ export class ShowSlideshowComponent implements OnInit {
       }),
       mergeMap((items) => from(items)),
       concatMap(items => {
-        if(firstStart) {
-          return of(items);
-        } else {
-          return of(items).pipe(delay(3000));
-        }        
+        return (firstStart) ? of(items) : of(items).pipe(delay(3000));
       })
     );
 
@@ -82,7 +78,7 @@ export class ShowSlideshowComponent implements OnInit {
     }
   }
 
-  continueSlideShow() : void {   
+  continueSlideShow() : void {
     const slideShow$ = this.slideshowImageService.getAllImages().pipe(
       map(items => {
         if(!this.slideShowRunning()) {
@@ -126,11 +122,7 @@ export class ShowSlideshowComponent implements OnInit {
         
         let item: SlideshowImage | undefined = items.find(item => item.id == nextId);
         
-        if(item != undefined) {
-          return item;
-        } else {
-          return items[0];
-        }        
+        return (item != undefined) ? item : items[0];     
       })
     );
 
