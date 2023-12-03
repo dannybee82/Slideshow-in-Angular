@@ -1,0 +1,28 @@
+<div class="container-fluid">
+    <div class="container">
+        <div class="image p-1 border border-dark border-1 rounded">
+            @if(this.currentImage() != null) {
+                <img [src]="this.currentImage()?.image ?? ''" [title]="this.currentImage()?.title ?? ''" alt="image" />
+            }            
+        </div>
+        <div class="buttons p-1 mt-2">
+            <button type="button" class="btn btn-primary me-1" title="Previous" (click)="previousOrNext(false)">
+                <i class="bi bi-caret-left-fill"></i>
+            </button>
+            @if(this.slideShowRunning()) {
+                <button type="button" class="btn btn-primary me-1" title="Pause" (click)="pauseOrPlay()">
+                    <i class="bi bi-pause-fill"></i>              
+                </button>
+            } 
+            @if(!this.slideShowRunning()) {
+                <button type="button" class="btn btn-success me-1" title="Play" (click)="pauseOrPlay()">
+                    <i class="bi bi-file-play"></i>               
+                </button>
+            }
+            <button type="button" class="btn btn-primary" title="next" (click)="previousOrNext(true)">
+                <i class="bi bi-caret-right-fill"></i>
+            </button>
+
+        </div>
+    </div>
+</div>
