@@ -1,4 +1,4 @@
-import { Component, OnInit, WritableSignal, signal } from '@angular/core';
+import { Component, OnInit, WritableSignal, signal, inject } from '@angular/core';
 import { SlideshowImageService } from '../../services/slideshow-image.service';
 import { SlideshowImage } from '../../models/slideshow-image';
 import { Observer, Subscription, concatMap, delay, first, from, map, mergeMap, of } from 'rxjs';
@@ -33,9 +33,7 @@ export class ShowSlideshowComponent implements OnInit {
 
   private _lastImageId: number = -1;
 
-  constructor(
-    private slideshowImageService: SlideshowImageService
-  ) {}
+	private slideshowImageService = inject(SlideshowImageService);
 
   ngOnInit() : void {
     this.startSlideShow(true);

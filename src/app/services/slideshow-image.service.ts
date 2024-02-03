@@ -15,8 +15,6 @@ export class SlideshowImageService {
     new SlideshowImage(4, '../assets/images/image_005.jpg', 'Image 005'),
   ];
 
-  constructor() { }
-
   public getAllImages() : Observable<SlideshowImage[]> {
     return new Observable<SlideshowImage[]>(observer => {          
       observer.next(this._images);
