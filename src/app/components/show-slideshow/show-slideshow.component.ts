@@ -26,13 +26,10 @@ export class ShowSlideshowComponent implements OnInit {
     }
   };
 
-  public currentImage: WritableSignal<SlideshowImage | null> = signal(null);
-  public slideShowRunning: WritableSignal<boolean> = signal(true);
-
+  currentImage: WritableSignal<SlideshowImage | null> = signal(null);
+  slideShowRunning: WritableSignal<boolean> = signal(true);
   private _subscription: Subscription = new Subscription();
-
   private _lastImageId: number = -1;
-
 	private slideshowImageService = inject(SlideshowImageService);
 
   ngOnInit() : void {
