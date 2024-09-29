@@ -8,11 +8,11 @@ import { Observable } from 'rxjs';
 export class SlideshowImageService {
 
   private _images: SlideshowImage[] = [
-    new SlideshowImage(0, '../assets/images/image_001.jpg', 'Image 001'),
-    new SlideshowImage(1, '../assets/images/image_002.jpg', 'Image 002'),
-    new SlideshowImage(2, '../assets/images/image_003.jpg', 'Image 003'),
-    new SlideshowImage(3, '../assets/images/image_004.jpg', 'Image 004'),
-    new SlideshowImage(4, '../assets/images/image_005.jpg', 'Image 005'),
+    {id: 0, image: '../assets/images/image_001.jpg', title: 'Image 001', width: 1956, height: 4128},
+    {id: 1, image: '../assets/images/image_002.jpg', title: 'Image 002', width: 4128, height: 1956},
+    {id: 2, image: '../assets/images/image_003.jpg', title: 'Image 003', width: 4128, height: 1956},
+    {id: 3, image: '../assets/images/image_004.jpg', title: 'Image 004', width: 4128, height: 1956},
+    {id: 4, image: '../assets/images/image_005.jpg', title: 'Image 005', width: 4128, height: 1956},
   ];
 
   public getAllImages() : Observable<SlideshowImage[]> {

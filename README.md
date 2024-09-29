@@ -1,27 +1,29 @@
 # SlideshowInAngular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.3.
+\- Angular 18 application + Bootstrap 5.
 
-## Development server
+\- Slideshow with some images.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Installation + run app
 
-## Code scaffolding
+**Command to install**
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+_npm install_
 
-## Build
+or shorter:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+_npm i_
 
-## Running unit tests
+**Command to run the application:**
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+_ng serve --open_
 
-## Running end-to-end tests
+or shorter:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+_ng s --o_
 
-## Further help
+## Application
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+A demo slideshow with some images.
+
+Experiment with NgOptimizedImage.

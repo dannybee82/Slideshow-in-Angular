@@ -1,9 +1,7 @@
-export class SlideshowImage {
-
-    constructor(
-        public id: number,
-        public image: string,
-        public title: string
-    ) {}
-
+export interface SlideshowImage {
+    id: number,
+    image: string,
+    title: string,
+    width: number,
+    height: number
 }
