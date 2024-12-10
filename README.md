@@ -1,6 +1,6 @@
 # SlideshowInAngular
 
-\- Angular 18 application + Bootstrap 5.
+\- Angular 19 application + Bootstrap 5.
 
 \- Slideshow with some images.
 
