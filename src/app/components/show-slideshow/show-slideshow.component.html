@@ -7,16 +7,14 @@
                         [src]="this.currentImage()?.image ?? ''" 
                         [title]="this.currentImage()?.title ?? ''" 
                         [alt]="this.currentImage()?.title ?? ''"  
-                        loading="eager"
-                    />
+                        loading="eager"/>
                 } @else {
                     <img 
                         [ngSrc]="this.currentImage()?.image ?? ''" 
                         [title]="this.currentImage()?.title ?? ''" 
                         [alt]="this.currentImage()?.title ?? ''"
                         priority      
-                        fill                                  
-                    />
+                        fill/>
                 }                
             }            
         </div>
@@ -37,7 +35,6 @@
             <button type="button" class="btn btn-primary" title="next" (click)="previousOrNext(true)">
                 <i class="bi bi-caret-right-fill"></i>
             </button>
-
         </div>
     </div>
 </div>

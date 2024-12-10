@@ -36,6 +36,7 @@ export class ShowSlideshowComponent implements OnInit {
   slideShowRunning: WritableSignal<boolean> = signal(true);
   private _subscription: Subscription = new Subscription();
   private _lastImageId: number = -1;
+  
 	private slideshowImageService = inject(SlideshowImageService);
 
   ngOnInit() : void {

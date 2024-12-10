@@ -4,6 +4,8 @@
 
 \- Slideshow with some images.
 
+\- See the root of this project for example image.
+
 ## Installation + run app
 
 **Command to install**
