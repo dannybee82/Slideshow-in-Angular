@@ -7,7 +7,6 @@ import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-show-slideshow',
-  standalone: true,
   imports: [
     CommonModule,
     NgOptimizedImage
