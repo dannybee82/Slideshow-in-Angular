@@ -15,7 +15,7 @@ export class SlideshowImageService {
     {id: 4, image: '../assets/images/image_005.jpg', title: 'Image 005', width: 4128, height: 1956},
   ];
 
-  public getAllImages() : Observable<SlideshowImage[]> {
+  public getAllImages(): Observable<SlideshowImage[]> {
     return new Observable<SlideshowImage[]>(observer => {          
       observer.next(this._images);
       observer.complete();

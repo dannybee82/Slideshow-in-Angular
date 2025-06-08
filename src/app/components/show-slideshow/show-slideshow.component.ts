@@ -2,14 +2,13 @@ import { Component, OnInit, WritableSignal, signal, inject } from '@angular/core
 import { SlideshowImageService } from '../../services/slideshow-image.service';
 import { SlideshowImage } from '../../models/slideshow-image';
 import { Observer, Subscription, concatMap, delay, from, map, mergeMap, of } from 'rxjs';
-
 import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-show-slideshow',
   imports: [
     NgOptimizedImage
-],
+  ],
   templateUrl: './show-slideshow.component.html',
   styleUrl: './show-slideshow.component.scss',
   providers: [
@@ -30,18 +29,18 @@ export class ShowSlideshowComponent implements OnInit {
     }
   };
 
-  currentImage: WritableSignal<SlideshowImage | null> = signal(null);
-  slideShowRunning: WritableSignal<boolean> = signal(true);
+  protected currentImage: WritableSignal<SlideshowImage | null> = signal(null);
+  protected slideShowRunning: WritableSignal<boolean> = signal(true);
   private _subscription: Subscription = new Subscription();
   private _lastImageId: number = -1;
   
 	private slideshowImageService = inject(SlideshowImageService);
 
-  ngOnInit() : void {
+  ngOnInit(): void {
     this.startSlideShow(true);
   }
 
-  startSlideShow(firstStart: boolean) : void {
+  startSlideShow(firstStart: boolean): void {
     if(this._subscription) {
       this._subscription.unsubscribe();
     }
@@ -63,7 +62,7 @@ export class ShowSlideshowComponent implements OnInit {
     this._subscription = slideShow$.subscribe(this._observer);
   }
 
-  pauseOrPlay() : void {
+  pauseOrPlay(): void {
     this._lastImageId = this.currentImage()?.id ?? -1;
 
     if(this.slideShowRunning()) {
@@ -78,7 +77,7 @@ export class ShowSlideshowComponent implements OnInit {
     }
   }
 
-  continueSlideShow() : void {
+  continueSlideShow(): void {
     const slideShow$ = this.slideshowImageService.getAllImages().pipe(
       map(items => {
         if(!this.slideShowRunning()) {
@@ -94,7 +93,7 @@ export class ShowSlideshowComponent implements OnInit {
     this._subscription = slideShow$.subscribe(this._observer);
   }
 
-  previousOrNext(isNext: boolean) : void {
+  previousOrNext(isNext: boolean): void {
     this.slideShowRunning.set(false);
 
     if(this._subscription) {
