@@ -2,15 +2,14 @@ import { Component, OnInit, WritableSignal, signal, inject } from '@angular/core
 import { SlideshowImageService } from '../../services/slideshow-image.service';
 import { SlideshowImage } from '../../models/slideshow-image';
 import { Observer, Subscription, concatMap, delay, from, map, mergeMap, of } from 'rxjs';
-import { CommonModule } from '@angular/common';
+
 import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-show-slideshow',
   imports: [
-    CommonModule,
     NgOptimizedImage
-  ],
+],
   templateUrl: './show-slideshow.component.html',
   styleUrl: './show-slideshow.component.scss',
   providers: [
