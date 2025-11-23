@@ -1,6 +1,6 @@
 # SlideshowInAngular
 
-\- Angular 20 application (with [Angular CLI](https://github.com/angular/angular-cli) version 20.0.1) + Bootstrap 5 and RxJS.
+\- Angular 21 application (with [Angular CLI](https://github.com/angular/angular-cli) version 21.0.0) + Bootstrap 5 and RxJS.
 
 \- Slideshow with some images.
 
@@ -31,6 +31,19 @@ A demo slideshow with some images.
 Experiment with NgOptimizedImage.
 
 ### **Changelog:**
+
+\- Upgrade to _Angular 21_ and upgraded other packages.
+
+*   Removed deprecated _Karma_ and installed _Vitest._
+*   Migrated _Jasmine_ tests to _Vitest_ tests for future use (command: **ng generate refactor-jasmine-vitest**).
+
+\- Migrations to _Zoneless_ (No _Zone.js_ - removed package _zone.js_)
+
+\- Added 1 new image.
+
+\- Reduced the sizes of the images.
+
+\- Various minor changes.
 
 _June 2025_
 

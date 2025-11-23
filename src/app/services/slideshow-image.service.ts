@@ -13,6 +13,7 @@ export class SlideshowImageService {
     {id: 2, image: '../assets/images/image_003.jpg', title: 'Image 003', width: 4128, height: 1956},
     {id: 3, image: '../assets/images/image_004.jpg', title: 'Image 004', width: 4128, height: 1956},
     {id: 4, image: '../assets/images/image_005.jpg', title: 'Image 005', width: 4128, height: 1956},
+    {id: 5, image: '../assets/images/image_006.jpg', title: 'Image 006', width: 1956, height: 4128},
   ];
 
   public getAllImages(): Observable<SlideshowImage[]> {
