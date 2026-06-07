@@ -1,12 +1,14 @@
 # SlideshowInAngular
 
-\- Angular 21 application (with [Angular CLI](https://github.com/angular/angular-cli) version 21.0.0) + Bootstrap 5 and RxJS.
+\- Angular 22 application (with [Angular CLI](https://github.com/angular/angular-cli) version 22.0.0) + _daisyUI/Tailwind CSS_ and RxJS.
 
 \- Slideshow with some images.
 
 \- See the root of this project for example image.
 
 ## Installation + run app
+
+**Angular 22** needs a **Node.js** version of at least _22.22.3_
 
 **Command to install**
 
@@ -47,6 +49,7 @@ _June 2026_
 \- Changed to _heroicons_ in stead of _Bootstrap icons_.
 
 _November 2025_
+
 \- Upgrade to _Angular 21_ and upgraded other packages.
 
 *   Removed deprecated _Karma_ and installed _Vitest._
