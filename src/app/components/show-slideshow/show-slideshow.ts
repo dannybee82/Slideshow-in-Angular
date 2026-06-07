@@ -1,21 +1,18 @@
 import { Component, OnInit, WritableSignal, signal, inject } from '@angular/core';
-import { SlideshowImageService } from '../../services/slideshow-image.service';
-import { SlideshowImage } from '../../models/slideshow-image';
+import { SlideshowImage } from '../../services/slideshow-image';
+import { SlideshowImageInterface } from '../../models/slideshow-image';
 import { Observer, Subscription, concatMap, delay, from, map, mergeMap, of } from 'rxjs';
-import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-show-slideshow',
-  imports: [
-    NgOptimizedImage
-  ],
-  templateUrl: './show-slideshow.component.html',
-  styleUrl: './show-slideshow.component.scss',
+  imports: [],
+  templateUrl: './show-slideshow.html',
+  styleUrl: './show-slideshow.scss',
   providers: [
-    SlideshowImageService
+    SlideshowImage
   ]
 })
-export class ShowSlideshowComponent implements OnInit {
+export class ShowSlideshow implements OnInit {
 
   private _observer: Observer<any> = {
     next: (result) => {
@@ -29,12 +26,12 @@ export class ShowSlideshowComponent implements OnInit {
     }
   };
 
-  protected currentImage: WritableSignal<SlideshowImage | null> = signal(null);
+  protected currentImage: WritableSignal<SlideshowImageInterface | null> = signal(null);
   protected slideShowRunning: WritableSignal<boolean> = signal(true);
   private _subscription: Subscription = new Subscription();
   private _lastImageId: number = -1;
   
-	private slideshowImageService = inject(SlideshowImageService);
+	private slideshowImageService = inject(SlideshowImage);
 
   ngOnInit(): void {
     this.startSlideShow(true);
@@ -119,7 +116,7 @@ export class ShowSlideshowComponent implements OnInit {
           nextId = 0;
         }
         
-        let item: SlideshowImage | undefined = items.find(item => item.id == nextId);
+        let item: SlideshowImageInterface | undefined = items.find(item => item.id == nextId);
         
         return (item != undefined) ? item : items[0];     
       })

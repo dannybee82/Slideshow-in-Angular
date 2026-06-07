@@ -32,6 +32,21 @@ Experiment with NgOptimizedImage.
 
 ### **Changelog:**
 
+_June 2026_
+
+\- Upgrade to _Angular 22_ and upgraded other packages.
+
+\- Migrated _@Injectable_ to _@Service_.
+
+\- Using the default: _ChangeDetectionStrategy.OnPush_ in stead of _ChangeDetectionStrategy.Eager_.
+
+\- Using the latest file naming conventions - and deleting the old schematics from _angular.json_
+
+\- Changed to _daisyUI_/_Tailwind CSS_ in stead of _Bootstrap 5_.
+
+\- Changed to _heroicons_ in stead of _Bootstrap icons_.
+
+_November 2025_
 \- Upgrade to _Angular 21_ and upgraded other packages.
 
 *   Removed deprecated _Karma_ and installed _Vitest._

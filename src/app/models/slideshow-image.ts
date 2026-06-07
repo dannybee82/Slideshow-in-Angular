@@ -1,4 +1,4 @@
-export interface SlideshowImage {
+export interface SlideshowImageInterface {
     id: number,
     image: string,
     title: string,

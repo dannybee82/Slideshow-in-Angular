@@ -6,6 +6,6 @@ import { RouterOutlet } from '@angular/router';
   imports: [RouterOutlet],
   template: `<router-outlet />`
 })
-export class AppComponent {
-  protected title: WritableSignal<string> = signal('Slideshow-in-Angular');
+export class App {
+  title: WritableSignal<string> = signal('Slideshow-in-Angular');
 }

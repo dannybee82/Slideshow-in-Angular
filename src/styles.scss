@@ -1,1 +1,8 @@
+@use "tailwindcss";
+@plugin "daisyui";
+
+@theme {
+    // Allow XS screen sizes.
+    --breakpoint-xs: 475px;
+}
 /* You can add global styles to this file, and also import other style files */

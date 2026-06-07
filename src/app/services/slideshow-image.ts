@@ -1,13 +1,11 @@
-import { Injectable } from '@angular/core';
-import { SlideshowImage } from '../models/slideshow-image';
+import { Service } from '@angular/core';
+import { SlideshowImageInterface } from '../models/slideshow-image';
 import { Observable } from 'rxjs';
 
-@Injectable({
-  providedIn: 'root'
-})
-export class SlideshowImageService {
+@Service()
+export class SlideshowImage {
 
-  private _images: SlideshowImage[] = [
+  private _images: SlideshowImageInterface[] = [
     {id: 0, image: '../assets/images/image_001.jpg', title: 'Image 001', width: 1956, height: 4128},
     {id: 1, image: '../assets/images/image_002.jpg', title: 'Image 002', width: 4128, height: 1956},
     {id: 2, image: '../assets/images/image_003.jpg', title: 'Image 003', width: 4128, height: 1956},
@@ -16,8 +14,8 @@ export class SlideshowImageService {
     {id: 5, image: '../assets/images/image_006.jpg', title: 'Image 006', width: 1956, height: 4128},
   ];
 
-  public getAllImages(): Observable<SlideshowImage[]> {
-    return new Observable<SlideshowImage[]>(observer => {          
+  public getAllImages(): Observable<SlideshowImageInterface[]> {
+    return new Observable<SlideshowImageInterface[]>(observer => {          
       observer.next(this._images);
       observer.complete();
     });
